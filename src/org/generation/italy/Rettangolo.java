@@ -1,6 +1,6 @@
 package org.generation.italy;
 
-public class Rettangolo implements IFigura {
+public class Rettangolo extends Figura implements IFigura {
 	float base, altezza;
 	
 	
@@ -18,6 +18,15 @@ public class Rettangolo implements IFigura {
 	@Override
 	public float perimetro() {		
 		return (base+altezza)*2;
+	}
+
+	@Override
+	public void disegna() {
+		System.out.println(" ---------");
+		System.out.println(" -       -");
+		System.out.println(" ---------");	
+		
+		
 	}
 
 }

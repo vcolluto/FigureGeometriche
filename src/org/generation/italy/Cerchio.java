@@ -1,6 +1,6 @@
 package org.generation.italy;
 
-public class Cerchio implements IFigura {
+public class Cerchio extends Figura implements IFigura,IColore {
 	float raggio;
 	
 	//costruttore	
@@ -19,9 +19,20 @@ public class Cerchio implements IFigura {
 		return 2*piGreco*raggio;
 	}
 
-	public void disegna() {
-		System.out.println("O");
+	@Override
+	public void disegna() {		
+		System.out.println("  - -  ");
+		System.out.println(" -   -  ");
+		System.out.println("  - -   ");		
 	}
+
+	@Override
+	public void colora() {
+		System.out.println("Rosso");
+		
+	}
+
+	
 	
 
 }

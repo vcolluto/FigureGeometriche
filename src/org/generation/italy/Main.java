@@ -5,17 +5,20 @@ import java.util.ArrayList;
 public class Main {
 
 	public static void main(String[] args) {
-		ArrayList<IFigura> elencoFigure=new ArrayList<IFigura>();
+		ArrayList<IFigura> elencoFigure=new ArrayList<IFigura>(); //nella lista ci può andare qualsiasi oggetto che estende la classe Figura 
 				
 		elencoFigure.add(new Rettangolo(20,30));
 		elencoFigure.add(new Cerchio(15));
 		elencoFigure.add(new Quadrato(8));
 		
 
+		
 		for (IFigura f:elencoFigure)
 		{
+			System.out.println("Tipo figura: "+((Figura)f).getTipoFigura());
+			((Figura) f).disegna();
 			if (f instanceof Cerchio)
-				System.out.println("Cerchio di raggio: " + ((Cerchio) f).raggio);
+				System.out.println("Cerchio di raggio: " + ((Cerchio) f).raggio);	
 			else if (f instanceof Quadrato)
 				System.out.println("Quadrato di lato: "+((Quadrato) f).lato);
 			if (f instanceof Rettangolo)
